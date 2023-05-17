@@ -10,15 +10,17 @@
       @apply absolute block top-0 bottom-0;
       background-color: var(--theme-bg);
       content: '';
-      left: -100vw;
-      right: -100vw;
+      width: 100vw;
+      left: 50%;
+      transform-origin: bottom left;
+      transform: translateX(-50%);
       z-index: -1;
     }
 
     h1 {
-      @apply text-slate-50 px-0 py-3 text-xl font-normal min-h-full leading-none;
+      @apply text-slate-50 px-0 py-3 font-normal min-h-full leading-none;
       @apply flex items-center;
-      @apply md:text-3xl;
+      @apply max-lg:text-3xl max-md:text-xl max-sm:text-sm;
     }
 
     .menu-container {

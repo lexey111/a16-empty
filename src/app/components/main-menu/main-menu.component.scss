@@ -3,16 +3,17 @@ nav {
 
   ul {
     @apply flex flex-row;
-    @apply text-xs;
-    @apply md:text-sm;
+    @apply text-sm max-md:text-xs;
 
     li {
       @apply flex flex-col h-8 justify-center leading-none;
+      @apply h-10 max-lg:h-8 max-sm:h-6;
 
       a {
         @apply h-full flex flex-row items-center px-6 rounded;
         color: var(--theme-text-darker);
         @apply transition ease-in-out;
+        @apply px-6 max-lg:px-4 max-sm:px-2;
 
         &:hover {
           color: var(--theme-text-lightest);
@@ -29,14 +30,5 @@ nav {
         }
       }
     }
-  }
-
-  &:after {
-    @apply absolute block top-0 bottom-0;
-    @apply bg-slate-100;
-    content: '';
-    left: -100vw;
-    right: -100vw;
-    z-index: -1;
   }
 }
