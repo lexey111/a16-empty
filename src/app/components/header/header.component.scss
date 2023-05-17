@@ -1,0 +1,28 @@
+:host {
+  @apply h-20 mb-10 w-full;
+  @apply flex-row flex grow-0 shrink-0;
+
+  .header {
+    @apply flex flex-row mb-10 relative items-center;
+    @apply min-h-full min-w-full;
+
+    &:after {
+      @apply absolute block top-0 bottom-0;
+      background-color: var(--theme-bg);
+      content: '';
+      left: -100vw;
+      right: -100vw;
+      z-index: -1;
+    }
+
+    h1 {
+      @apply text-slate-50 px-0 py-3 text-xl font-normal min-h-full leading-none;
+      @apply flex items-center;
+      @apply md:text-3xl;
+    }
+
+    .menu-container {
+      @apply ml-auto pl-4 flex flex-row justify-center;
+    }
+  }
+}

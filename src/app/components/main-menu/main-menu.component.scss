@@ -1,24 +1,31 @@
 nav {
-  @apply flex flex-row mb-10 relative;
-  //  @apply bg-slate-50;
+  @apply flex flex-row relative;
 
   ul {
-    @apply flex flex-row text-sm;
+    @apply flex flex-row;
+    @apply text-xs;
+    @apply md:text-sm;
+
     li {
       @apply flex flex-col h-8 justify-center leading-none;
 
       a {
-        @apply h-full flex flex-row items-center px-4;
-        @apply text-slate-700;
+        @apply h-full flex flex-row items-center px-6 rounded;
+        color: var(--theme-text-darker);
         @apply transition ease-in-out;
-        @apply hover:bg-slate-200;
+
+        &:hover {
+          color: var(--theme-text-lightest);
+        }
 
         &:hover, &:focus {
           @apply outline-none;
         }
 
         &.active-link {
-          @apply bg-slate-400 text-white;
+          @apply bg-slate-700;
+          color: var(--theme-text-lighter);
+          background-color: var(--theme-bg-darker);
         }
       }
     }

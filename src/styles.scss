@@ -10,6 +10,17 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --theme-bg: theme('colors.slate.600');
+  --theme-bg-darker: theme('colors.slate.800');
+
+  --theme-text: theme('colors.slate.50');
+  --theme-text-lighter: theme('colors.slate.100');
+  --theme-text-lightest: theme('colors.white');
+  --theme-text-darker: theme('colors.slate.300');
+  --theme-text-darkest: theme('colors.slate.400');
+}
+
 app-root {
   max-width: 80%;
   width: 960px;
@@ -27,4 +38,12 @@ h2 {
 
 h3 {
   @apply text-slate-500 pb-3 text-xl font-normal;
+}
+
+.app-page {
+  @apply shrink-0;
+
+  p {
+    @apply mb-5;
+  }
 }

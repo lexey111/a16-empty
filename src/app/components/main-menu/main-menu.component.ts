@@ -11,5 +11,5 @@ import {routes} from '../../app.routes';
   styleUrls: ['./main-menu.component.scss']
 })
 export class MainMenuComponent {
-  public routes: Routes = routes;
+  public routes: Routes = routes.filter(value => !!value.title);
 }

@@ -6,16 +6,19 @@
 .footer {
   @apply mt-10;
   @apply flex flex-row flex-nowrap w-full justify-between relative;
-  //  @apply bg-slate-400;
 
   .footer-section {
     @apply border border-slate-300 border-y-0 border-l-0;
     @apply p-5;
     @apply grow;
+    @apply max-h-96;
     min-width: 150px;
+    overflow-y: hidden;
+    overflow-x: visible;
 
     p {
-      @apply text-white text-xs;
+      @apply text-xs;
+      color: var(--theme-text-darkest);
     }
 
     &:first-child {
@@ -29,7 +32,7 @@
 
   &:after {
     @apply absolute block top-0 bottom-0;
-    @apply bg-slate-400;
+    background-color: var(--theme-bg);
     content: '';
     left: -100vw;
     right: -100vw;

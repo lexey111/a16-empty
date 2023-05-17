@@ -1,12 +1,9 @@
 <div class="app-container">
-  <h1>
-    Standalone Angular Test Application | with routing
-  </h1>
+  <app-header/>
 
-  <app-main-menu/>
-
-  <router-outlet>
-    <span class="loader" *ngIf="isLoading">
+  <router-outlet *ngIf="!isLoading">
+  </router-outlet>
+  <span class="loader" *ngIf="isLoading">
     <svg class="animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
          viewBox="0 0 24 24">
       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -15,7 +12,6 @@
     </svg>
     Loading...
     </span>
-  </router-outlet>
 
   <app-footer/>
 </div>
