@@ -1,0 +1,21 @@
+h1 {
+  @apply text-slate-700 pb-5 text-3xl font-normal;
+}
+
+.loader {
+  display: inline-flex;
+  align-items: center;
+  @apply text-slate-300 p-4 text-sm animate-pulse;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    display: flex;
+    @apply mr-2 h-5 w-5 text-slate-500
+  }
+}
+
+.app-container {
+  min-height: 100vh;
+  @apply flex flex-col;
+}

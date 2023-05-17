@@ -1,0 +1,35 @@
+nav {
+  @apply flex flex-row mb-10 relative;
+  //  @apply bg-slate-50;
+
+  ul {
+    @apply flex flex-row text-sm;
+    li {
+      @apply flex flex-col h-8 justify-center leading-none;
+
+      a {
+        @apply h-full flex flex-row items-center px-4;
+        @apply text-slate-700;
+        @apply transition ease-in-out;
+        @apply hover:bg-slate-200;
+
+        &:hover, &:focus {
+          @apply outline-none;
+        }
+
+        &.active-link {
+          @apply bg-slate-400 text-white;
+        }
+      }
+    }
+  }
+
+  &:after {
+    @apply absolute block top-0 bottom-0;
+    @apply bg-slate-100;
+    content: '';
+    left: -100vw;
+    right: -100vw;
+    z-index: -1;
+  }
+}
