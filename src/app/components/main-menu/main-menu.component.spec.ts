@@ -1,6 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { MainMenuComponent } from './main-menu.component';
+import {MainMenuComponent} from './main-menu.component';
+import {RouterTestingModule} from "@angular/router/testing";
+import {ActivatedRoute} from "@angular/router";
 
 describe('MainMenuComponent', () => {
   let component: MainMenuComponent;
@@ -8,7 +10,19 @@ describe('MainMenuComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [MainMenuComponent]
+      imports: [
+        MainMenuComponent,
+        RouterTestingModule,
+      ],
+      providers:
+        [
+          {
+            provide: ActivatedRoute,
+            useValue: {
+              snapshot: {path: 'home'}
+            }
+          }
+        ]
     });
     fixture = TestBed.createComponent(MainMenuComponent);
     component = fixture.componentInstance;
@@ -19,3 +33,4 @@ describe('MainMenuComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

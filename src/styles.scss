@@ -15,8 +15,6 @@
 }
 
 body {
-  // width: 100vw;
-  // height: 100vh;
   @apply bg-white p-0 m-0 flex relative items-center justify-center;
   overflow: auto;
 }
@@ -30,6 +28,34 @@ app-root {
   @apply max-sm:px-2;
 }
 
+.app-container {
+  min-height: 100vh;
+  @apply flex flex-col;
+}
+
+.app-page {
+  @apply shrink-0;
+  @apply max-lg:text-base max-md:text-sm max-sm:text-xs;
+
+  p {
+    @apply mb-5;
+  }
+
+  animation-name: appear;
+  animation-duration: 0.5s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 h1 {
   @apply text-slate-700 pb-5 text-3xl font-normal;
 }
@@ -40,13 +66,4 @@ h2 {
 
 h3 {
   @apply text-slate-500 pb-3 text-xl font-normal;
-}
-
-.app-page {
-  @apply shrink-0;
-  @apply max-lg:text-base max-md:text-sm max-sm:text-xs;
-
-  p {
-    @apply mb-5;
-  }
 }
